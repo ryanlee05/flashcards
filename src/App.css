@@ -1,42 +1,77 @@
 #root {
-  max-width: 1280px;
+  width: 100%;
+  height: 100%;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.container {
+  height: 47rem;
+  background-color: rgb(91, 155, 45);
+  border-radius: 9px;
+  box-shadow: 5px 8px 16px rgb(0, 0, 0),
+  -5px -8px 16px rgba(0, 0, 0, 0.22);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.buttons {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  font-weight: 500;
 }
 
-.card {
-  padding: 2em;
+
+.flashcard {
+  width: 35rem;
+  height: 20rem;
+  cursor: pointer;
+  perspective: 1000px;
 }
 
-.read-the-docs {
-  color: #888;
+.flashcard:hover {
+  transform: scale(1.02);
+  transition-duration: .2s;
+}
+
+.flashcard-inner {
+  background-color: rgb(255, 255, 255);
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.4s;
+  transform-style: preserve-3d; 
+  box-shadow: 0px 8px 15px black;
+}
+
+.flashcard.flipped .flashcard-inner{
+  transform: rotateX(180deg);
+  box-shadow: 0px -8px 15px black;
+}
+
+.flashcard-front,  .flashcard-back{
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  backface-visibility: hidden;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.flashcard h3 {
+  color: black;
+}
+
+.flashcard-back {
+  transform: rotateX(180deg);
 }

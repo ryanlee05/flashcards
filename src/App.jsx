@@ -124,7 +124,7 @@ function App() {
         <div className = "buttons">
           <button className = {`button ${leftEnd ? "blur" : ""}`} onClick = {showLeftCard}>Left</button>
           <button className = {`button ${rightEnd ? "blur" : ""}`} onClick = {showRightCard}>Right</button>
-          <button onClick = {shuffleCards} >Shuffle Cards</button>
+          <button onClick = {shuffleCards} >Shuffle Ca  rds</button>
         </div>
       </div>
     </>

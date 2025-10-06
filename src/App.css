@@ -25,6 +25,7 @@
   display: flex;
   justify-content: center;
   font-weight: 500;
+  gap: .5rem;
 }
 
 
@@ -74,4 +75,36 @@
 
 .flashcard-back {
   transform: rotateX(180deg);
+}
+
+.button.blur {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+}
+
+
+.form p {
+  font-size: 1.2rem;
+}
+
+input {
+  font-size: 1.2rem;
+  outline: none;
+  border-radius: 8px;
+}
+
+
+.right {
+  border: solid 5px green;
+}
+
+.wrong {
+  border: solid 5px red;
 }
